@@ -1,0 +1,12 @@
+.quote {
+    text-transform: uppercase;
+    font-style: italic;
+    margin-top: 2rem;
+  }
+  
+  .author {
+    text-align: right;
+    font-weight: bold;
+    margin-top: 0.5rem;
+  }
+  
