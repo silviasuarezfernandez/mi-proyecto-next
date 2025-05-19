@@ -1,6 +1,9 @@
 ---
-title: "Segundo Post"
-date: "2025-05-16"
+title: "Cuentacuentos"
+date: "2025-05-17"
 ---
 
-Este es el contenido de mi segundo post.
+![Imagen de cuentacuentos](/cuentacuentos.png)
+
+En este post hablamos sobre la actividad de cuentacuentos para los más pequeños. ¡Una experiencia mágica llena de imaginación!
+

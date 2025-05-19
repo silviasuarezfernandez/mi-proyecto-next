@@ -21,11 +21,13 @@ export default function Header() {
         <Link href="/">Inicio</Link> |{' '}
         <Link href="/about">Acerca de</Link> |{' '}
         <Link href="/contact">Contacto</Link> |{' '}
+        <Link href="/blog">Blog</Link> |{' '}
         <Link href="/privacy">Política de Privacidad</Link>
       </nav>
     </header>
   );
 }
+
 
 
 

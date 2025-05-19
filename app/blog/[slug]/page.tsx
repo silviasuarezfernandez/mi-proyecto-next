@@ -1,27 +1,27 @@
-import React from 'react';
-import Link from 'next/link';
-import { getPosts } from '@/lib/posts';
 
-export default async function BlogPage() {
-  const posts = await getPosts();
+
+import { getPostBySlug } from '@/lib/posts';
+
+interface Props {
+  params: {
+    slug: string;
+  };
+}
+
+export default async function PostPage({ params }: Props) {
+  const post = await getPostBySlug(params.slug);
 
   return (
     <main>
-      <h1>Blog</h1>
-      <ul>
-        {posts.map((post) => (
-          <li key={post.slug}>
-            <Link href={`/blog/${post.slug}`}>
-              {post.title}
-            </Link>
-            <br />
-            <small>{post.date}</small>
-          </li>
-        ))}
-      </ul>
+      <h1>{post.title}</h1>
+      <p>{post.date}</p>
+      <article dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
     </main>
   );
 }
+
+
+
 
 
 
