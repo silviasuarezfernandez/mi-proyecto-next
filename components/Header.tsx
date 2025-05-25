@@ -10,9 +10,9 @@ export default function Header() {
       <div className={styles.logo}>
         <Link href="/">
           <Image
-            src="/logo.jpg"   
+            src="/logotipo.jpg"   
             alt="Logo"
-            width={50}
+            width={120}
             height={50}
           />
         </Link>
