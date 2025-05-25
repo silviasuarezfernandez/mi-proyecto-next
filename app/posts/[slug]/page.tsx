@@ -1,9 +1,9 @@
-
 import fs from 'fs/promises';
 import path from 'path';
 import matter from 'gray-matter';
 import { notFound } from 'next/navigation';
 import { marked } from 'marked';
+import Link from 'next/link'; // IMPORTA Link aquí arriba, no dentro del JSX
 
 type Params = {
   params: { slug: string };
@@ -52,7 +52,8 @@ export default async function PostPage({ params }: Params) {
         <p><em>{new Date(data.date).toLocaleDateString()}</em></p>
         <div dangerouslySetInnerHTML={{ __html: html }} />
         <p>
-          <a href="/posts">← Volver al blog</a>
+          {/* se usa Link para navegar de vuelta a posts */}
+          <Link href="/posts">← Volver a posts</Link>
         </p>
       </article>
     );
@@ -60,5 +61,6 @@ export default async function PostPage({ params }: Params) {
     notFound();
   }
 }
+
 
   
