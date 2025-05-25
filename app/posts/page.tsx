@@ -36,8 +36,10 @@ export default async function PostsPage() {
         {posts.map((post) => (
           <li key={post.slug}>
             <Link href={`/posts/${post.slug}`}>
-              <strong>{post.title}</strong> <br />
-              <small>{new Date(post.date).toLocaleDateString()}</small>
+              <a>
+                <strong>{post.title}</strong> <br />
+                <small>{new Date(post.date).toLocaleDateString()}</small>
+              </a>
             </Link>
           </li>
         ))}
@@ -45,6 +47,7 @@ export default async function PostsPage() {
     </div>
   );
 }
+
 
 
 

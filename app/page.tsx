@@ -10,11 +10,13 @@ export default function HomePage() {
         alt="Foto de bienvenida a Librería Acuarel"
         width={600}
         height={400}
+        priority // para que cargue rápido al entrar a la página
       />
 
       <p>¡Este es mi primer proyecto con Next.js!</p>
     </main>
   );
 }
+
 
 
